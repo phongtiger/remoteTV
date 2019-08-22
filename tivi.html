@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="remote.js"></script>
+    <script src="tivi.js"></script>
+</head>
+<body>
+
+</body>
+<script>
+    let remote1 = new Remote();
+    let tv1 = new Tivi(4,10,false);
+
+    tv1.setStatus(true);
+    console.log(tv1.getStatus());
+
+    tv1.setChanel(7);
+    console.log(tv1.getChanel());
+
+    remote1.setCode(3);
+    tv1.remoteChanel(remote1);
+    console.log(tv1.getChanel());
+
+    remote1.upVolume(tv1,2);
+    console.log(tv1.getVolume());
+
+    remote1.turn(tv1,false);
+    console.log(tv1.getStatus())
+
+</script>
+</html>
